@@ -1,0 +1,102 @@
+@use "./mixin" as *;
+@use "./color" as *;
+@use "./variable" as *;
+/**
+    リセットと初期設定を両方記載
+    共通パーツの指定 section__area section__title inner など
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Noto+Serif+JP:wght@200..900&display=swap');
+$ff-noto-sans-japanese: "Noto Serif JP", serif;
+$ff-lavishly-yours : "Lavishly Yours", cursive;
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+
+
+html {
+  font-size: 10px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: $main-color;
+  font-size: 16px;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  background: #fff;
+  @include mq() {
+    letter-spacing: 1.5px;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+small,
+b,
+a,
+strong,
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.inner {
+  width: $innerWidth1170;
+  max-width: $w100;
+  margin: $marginCenter;
+  @include mq() {
+    width: $w100;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $main-color;
+}
+
+
+.btn {
+  margin-top: 20px;
+  a {
+    display: inline-block;
+    padding: 12px 100px;
+    background: $rich-font;
+    color: $main-color;
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,21 @@
+//インナー幅の指定
+$innerWidth1170 : 1170px;
+
+//ブロックは中央よせ
+$marginCenter : 0 auto;
+
+//横幅の指定
+$w100 : 100%;
+$w75 : 75%;
+$w50 : 50%;
+$w12 : 25%;
+
+//相対パス
+$imgPath : '../images/';
+
+
+$breakpoints: (
+  "md": "screen and (max-width: 767px)",
+  "tab": "screen and (min-width: 768px) and (max-width: 1199px) ",
+  "pc": "screen and (min-width: 1200px)",
+);

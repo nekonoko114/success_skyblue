@@ -1,0 +1,65 @@
+@use "../setting" as *;
+@use "../mixin" as *;
+@use "../color" as *;
+@use "../variable" as *;
+
+.footer {
+    background: $main-color;
+    color: #fff;
+
+    &__inner {
+        padding: 50px;
+    }
+
+    // Flexで3分割
+    &__flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch; // 高さを揃える
+    }
+
+    // left
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; // 上下に配置
+
+        &__link {
+            vertical-align: top;
+            a {
+                color: #fff;
+            }
+        }
+
+        &__copy {
+            // 下に配置されるようになります
+        }
+    }
+
+    // center
+    &__center {
+        &__access,
+        &__address,
+        &__tell,
+        &__business__hours{
+            margin-bottom: 40px;
+        }
+
+        &__address {
+            line-height: 1.5;
+        }
+    }
+
+    // right デザイン専用のクラス
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; // 上下に配置
+        text-align: center;
+        &__link {
+            a {
+                color: #fff;
+            }
+        }
+    }
+}

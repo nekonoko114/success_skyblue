@@ -1,0 +1,20 @@
+@use './setting';
+@use './color';
+@use './variable';
+@use './mixin';
+
+
+@use './components/header';
+@use './components/footer';
+
+//sectionエリア内のスタイル各自それぞれのスタイル
+
+//topページの読み込み
+
+@use "./top/fv";
+@use "./top/greeting";
+@use "./top/service";
+@use "./top/business";
+@use "./top/news";
+@use "./top/topContact";
+
