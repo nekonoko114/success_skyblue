@@ -4,13 +4,12 @@
 @use "../variable" as *;
 
 .footer {
-    background: $main-color;
-    color: #fff;
+    background: $base-color-white;
+    color: $main-color;
 
     &__inner {
         padding: 50px;
     }
-
     // Flexで3分割
     &__flex {
         display: flex;
@@ -27,7 +26,7 @@
         &__link {
             vertical-align: top;
             a {
-                color: #fff;
+                color: $main-color;
             }
         }
 
@@ -58,7 +57,7 @@
         text-align: center;
         &__link {
             a {
-                color: #fff;
+                color: $main-color;
             }
         }
     }
