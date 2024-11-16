@@ -11,6 +11,11 @@
     position: relative;
     border-top-left-radius: 50% 20%;
     border-top-right-radius: 50% 20%;
+
+    @include mq() {
+        padding: 80px 0 80px;
+        margin-top: 100px;
+    }
     
 
     &::before {
@@ -32,17 +37,27 @@
     &__ttl {
         // text-align: center;
         margin-bottom: 30px;
+        @include mq() {
+            margin-bottom: 24px;
+        }
      img {
         width: 500px;
+        @include mq() {
+            width: 80%;
+        }
      }
         
     }
 
     &__txt {
         margin-bottom: 50px;
+        @include mq() {
+            margin-bottom: 16px;
+        }
     }
 
     &__link {
         @include btn();
+        padding: 10px 30px;
     }
 }

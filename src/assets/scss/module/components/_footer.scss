@@ -4,17 +4,32 @@
 @use "../variable" as *;
 
 .footer {
+
+    a {
+        
+        @include mq() {
+            font-size: 10px;
+        }
+    }
     background: $base-color-white;
     color: $main-color;
 
     &__inner {
         padding: 50px;
+
+        @include mq() {
+            padding: 20px;
+        }
     }
     // Flexで3分割
     &__flex {
         display: flex;
         justify-content: space-around;
         align-items: stretch; // 高さを揃える
+
+        @include mq() {
+            justify-content: space-between;
+        }
     }
 
     // left
@@ -37,11 +52,16 @@
 
     // center
     &__center {
+        @include mq() {
+            font-size: 10px;
+        }
         &__access,
         &__address,
         &__tell,
         &__business__hours{
             margin-bottom: 40px;
+
+            
         }
 
         &__address {
@@ -58,6 +78,7 @@
         &__link {
             a {
                 color: $main-color;
+                
             }
         }
     }

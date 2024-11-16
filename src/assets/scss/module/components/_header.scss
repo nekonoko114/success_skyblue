@@ -11,7 +11,11 @@
     border: 1px solid $main-color;
 
     @include mq() {
-        padding: 30px 40px 20px;
+        display: none;
+    }
+
+    @include mq() {
+        padding: 0;
     }
     &__wrap {
         display: flex;
@@ -39,6 +43,10 @@
             margin-left: 10px;
             color: $logo-color;
 
+
+            @include mq() {
+                display: none;
+            }
 
         }
     }

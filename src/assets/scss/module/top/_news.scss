@@ -5,9 +5,16 @@
 
 .news {
 
+    @include mq() {
+        padding: 20px;
+    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
+
+        @include mq() {
+            flex-direction: column;
+        }
     }
 
     &__ttl {
@@ -18,6 +25,11 @@
     &__wrap {
         // margin-left: auto;
         margin-left: 100px;
+
+        @include mq() {
+            margin-left: 0;
+            margin-top: 48px;
+        }
     }
 
     &__lists  {
@@ -26,6 +38,11 @@
         grid-template-columns: 200px auto;
         gap: 40px;
         margin-bottom: 60px;
+
+        @include mq() {
+            grid-template-columns: 200px;
+            gap: 10px;
+        }
         &__head {
             
         }
@@ -33,6 +50,11 @@
         &__body {
             width: 400px;
             margin-left: 60px;
+
+            @include mq() {
+                margin-left: 0;
+                width: 350px;
+            }
         }
     }
 

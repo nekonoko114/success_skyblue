@@ -3,8 +3,23 @@
 @use "../color" as *;
 @use "../variable" as *;
 
-.hero {
+.hero { 
+    &__logo {
+        display: none;
 
+        @include mq() {
+            display: block;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            z-index: 100;
+            img {
+                width: 150px;
+                height: 150px;
+                opacity: 0.5;
+            }
+        }
+    }
     &__bg {
         position: relative;
             &__ttl {
@@ -17,11 +32,20 @@
                     position: absolute;
                     top: 10%;
                     right: 20%;
+
+                    @include mq() {
+                        top: 20%;
+                    }
                 }
 
                 &-bottom {
                     bottom: 10%;
                     right: 30%;
+
+                    @include mq() {
+                        right: 50%;
+                        bottom: 20%;
+                    }
                 }
             }        
 
@@ -32,6 +56,10 @@
             height: 100vh;
             object-fit: cover;
             object-position: center bottom;
+
+            @include mq() {
+                object-position: right bottom;
+            }
         }
     }
 
