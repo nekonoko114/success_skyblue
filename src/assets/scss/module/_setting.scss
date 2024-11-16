@@ -48,6 +48,7 @@ img {
   max-width: 100%;
   width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 
 h1,
@@ -76,17 +77,18 @@ ol {
 }
 
 .inner {
-  width: $innerWidth1170;
-  max-width: $w100;
-  margin: $marginCenter;
+  width: 1080px;
+  max-width: 100%;
+  margin: 0 auto;
   @include mq() {
-    width: $w100;
+    width: 100%;
   }
 }
 
 a {
   text-decoration: none;
   color: $main-color;
+  cursor: pointer;
 }
 
 
@@ -95,7 +97,7 @@ a {
   a {
     display: inline-block;
     padding: 12px 100px;
-    background: $rich-font;
+    background: $base-color-white;
     color: $main-color;
     border-radius: 4px;
   }

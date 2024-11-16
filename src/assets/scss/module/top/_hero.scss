@@ -1,0 +1,40 @@
+@use "../setting" as *;
+@use "../mixin" as *;
+@use "../color" as *;
+@use "../variable" as *;
+
+.hero {
+
+    &__bg {
+        position: relative;
+            &__ttl {
+                position: absolute;
+                font-size: 32px;
+                letter-spacing: 4px;
+                writing-mode: vertical-lr;
+                text-shadow: 10px 20px 8px #81C7F0;
+                &-top {
+                    position: absolute;
+                    top: 10%;
+                    right: 20%;
+                }
+
+                &-bottom {
+                    bottom: 10%;
+                    right: 30%;
+                }
+            }        
+
+    }
+
+    &__img {
+        img {
+            height: 100vh;
+            object-fit: cover;
+            object-position: center bottom;
+        }
+    }
+
+
+
+}

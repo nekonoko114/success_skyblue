@@ -17,7 +17,7 @@
   }
 }
 
-@mixin btn( $padding :12px 100px, $bg :#C7B994 , $color : $main-color ) {
+@mixin btn( $padding :12px 100px, $bg :#fff , $color : $main-color ) {
     margin-top: 20px;
     display: inline-block;
     padding: $padding;
@@ -25,11 +25,12 @@
     color: $color;
     border-radius: 4px;
     transition: 0.3s;
+    border: 1px solid $main-color;
   
     &:hover {
-      background: $rich-font;
+    
       color: $main-color;
-      border-color: $rich-font;
+      
     }
   
 }
