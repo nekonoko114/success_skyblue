@@ -1,0 +1,52 @@
+@use "../setting" as *;
+@use "../mixin" as *;
+@use "../color" as *;
+@use "../variable" as *;
+
+.news {
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__ttl {
+        font-size: 24px;
+        width: 100px;
+    }
+
+    &__wrap {
+        // margin-left: auto;
+        margin-left: 100px;
+    }
+
+    &__lists  {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 200px auto;
+        gap: 40px;
+        margin-bottom: 60px;
+        &__head {
+            
+        }
+
+        &__body {
+            width: 400px;
+            margin-left: 60px;
+        }
+    }
+
+    &__more {
+        // font-size: 16px;
+        color: $accent-color;
+        text-align: center;
+        
+        a {
+            color: $accent-color;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+    }
+
+    
+}

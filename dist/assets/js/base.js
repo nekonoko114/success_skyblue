@@ -8,7 +8,7 @@
 //    */
 $(".global").click(function () {
   $(".global span").toggleClass("is-active");
-  $(".global__menu > ul").toggleClass("is-active");
+  $(".global__menu").toggleClass("is-active");
   $(".global__bg").toggleClass("is-active");
 
   // グローバルメニューが開いているかどうかでbodyのスクロールを制御

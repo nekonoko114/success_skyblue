@@ -1,0 +1,54 @@
+@use "../setting" as *;
+@use "../mixin" as *;
+@use "../color" as *;
+@use "../variable" as *;
+
+
+.greeting {
+    margin-bottom: 160px;
+
+    &__wrapper {
+
+    }
+
+    &__ttl{
+        font-size: 32px;
+        margin-bottom: 96px;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__content {
+        width: 40%;
+    }
+
+    &__name {
+        margin-bottom: 96px;
+    }
+
+    &__txt {
+        margin-bottom: 96px;
+    }
+
+    &__link {
+        text-align: center;
+        a {
+            @include btn();
+            padding: 10px 120px;
+        }
+
+    }
+
+    &__img {
+        width: 30%;
+        
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+}
