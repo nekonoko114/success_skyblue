@@ -18,7 +18,7 @@ $(".global").click(function () {
 });
 
 $(document).ready(function() {
-    // スクロールイベントを監視
+    // スクロールイベントを監視z
     $(window).on("scroll", function() {
         $(".service__list").each(function(index) {
             // 要素がスクロールで表示されたら

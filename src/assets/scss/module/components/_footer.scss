@@ -4,31 +4,36 @@
 @use "../variable" as *;
 
 .footer {
-
+    background: $base-color-white;
+    color: $main-color;
     a {
         
         @include mq() {
-            font-size: 10px;
+            font-size: 16px;
         }
     }
-    background: $base-color-white;
-    color: $main-color;
+    
 
     &__inner {
         padding: 50px;
 
-        @include mq() {
+        @include mq() {   
             padding: 20px;
         }
     }
     // Flexで3分割
     &__flex {
-        display: flex;
-        justify-content: space-around;
-        align-items: stretch; // 高さを揃える
 
+        @include mq("pc") {
+            display: flex;
+            justify-content: space-around;
+        }
+    
         @include mq() {
-            justify-content: space-between;
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+            
         }
     }
 
@@ -38,6 +43,11 @@
         flex-direction: column;
         justify-content: space-between; // 上下に配置
 
+        @include mq() {
+            margin-top: 20px;
+            flex-direction: center;
+        }
+
         &__link {
             vertical-align: top;
             a {
@@ -45,23 +55,27 @@
             }
         }
 
-        &__copy {
-            // 下に配置されるようになります
-        }
+        
     }
 
     // center
     &__center {
+        
         @include mq() {
-            font-size: 10px;
+            
+            margin-top: 40px;
+
         }
         &__access,
         &__address,
         &__tell,
         &__business__hours{
             margin-bottom: 40px;
-
-            
+            font-size: 16px;
+            @include mq() {
+                margin-bottom: 10px;
+                margin-top: 12px;
+            }
         }
 
         &__address {
@@ -74,12 +88,42 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between; // 上下に配置
-        text-align: center;
+
+        @include mq() {
+            margin-top: 40px;
+            flex-direction: row;
+            flex-wrap: wrap;    
+        }
         &__link {
+            
+
+            @include mq() {
+                margin: 4px;
+                width: calc(100% / 2 - 8px);
+                text-align: center;
+                border: 1px solid $main-color;
+            }
             a {
+
+                @include mq() {
+                    display: inline-block;
+                    padding: 10px;
+                    text-align: center;
+                }
                 color: $main-color;
                 
             }
+        }
+    }
+
+    &__copy {
+        // 下に配置されるようになります
+        margin-top: 40px;
+        font-size: 12px;
+        text-align: center;
+
+        @include mq("pc") {
+            font-size: 14px;
         }
     }
 }

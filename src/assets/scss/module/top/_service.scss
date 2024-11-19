@@ -14,7 +14,7 @@
     &__wrapper {
 
         @include mq() {
-            padding: 20px;
+            padding: 10px;
         }
     }
 
@@ -43,7 +43,7 @@
         justify-content: space-between;
 
         @include mq() {
-            margin-bottom: 80px;
+            margin-bottom: 20px;
         }
 
         &:nth-child(odd) {
@@ -57,20 +57,22 @@
     }
 
     &__content {
-        width: 30%;
+        width: 40%;
         margin: 30px;
+        @include mq() {
+            margin: 12px;
+        }
         &__category {
             color: $accent-color;
         }        
 
         &__ttl {
             font-size: 32px;
-
+            margin-top: 16px;
+            margin-bottom: 16px;
             @include mq() {
                 font-size: 18px;
             }
-            margin-top: 16px;
-            margin-bottom: 16px;
         }   
 
         &__txt {
